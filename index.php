@@ -7,25 +7,29 @@ $listings = file_exists('listings.txt') ? file('listings.txt') : [];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <title>Аналог Avito</title>
     <script src="./script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Аналог Avito</h1>
-        <button id="theme-toggle">🌇</button>
-        <a href="add_listing.php" class="add-button3">Добавить объявление</a>
-        <a href="https://example.com/registration" class="register-button">Регистрация</a> 
+        <h1>BazaarX</h1>
+        <div class="butt">
+            <button id="theme-toggle">🌇</button>
+            <a href="add_listing.php" class="add-button3">➕</a>
+            <a href="./register/h2.html" class="register-button">Регистрация</a>
+        </div>
         <form method="GET" action="index.php" class="search-form">
             <input type="text" name="search" placeholder="Поиск..." required>
-            <button type="submit">Найти</button>
+            <button class="search" type="submit">🔎</button>
         </form>
     </header>
     <main>
     <?php
             // Получаем список объявлений из файла
-            $listings = file('listings.txt');
+            $listings = file('BAXAR\listings.txt');
 
             // Проверяем, есть ли запрос на поиск
             if (isset($_GET['search'])) {

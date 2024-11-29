@@ -1,56 +1,76 @@
+/* h2cs.css */
+
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
+/* Auth menu styles */
 .auth-menu {
-    background: white;
+    max-width: 300px;
+    margin: 40px auto;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .auth-menu h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-menu form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-menu input[type="email"],
+.auth-menu input[type="password"] {
+    width: 100%;
+    height: 40px;
     margin-bottom: 20px;
-}
-
-.auth-menu input {
-    width: 100%;
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.auth-menu button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2e25a8;
+.auth-menu input[type="email"]:focus,
+.auth-menu input[type="password"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    width: 100px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
-    color: white;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.auth-menu button:hover {
-    background-color: #218838;
+button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
 
 .auth-menu p {
+    margin-top: 20px;
     text-align: center;
-    margin-top: 15px;
 }
 
 .auth-menu a {
-    color: #007bff;
     text-decoration: none;
+    color: #337ab7;
 }
 
 .auth-menu a:hover {
-    text-decoration: underline;
+    color: #23527c;
 }
